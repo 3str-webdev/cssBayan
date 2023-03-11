@@ -8,6 +8,7 @@
 	--accShadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
 	--showDuration: 0.5s;
+	--showDelay: 0.1s;
 }
 
 * {
@@ -26,6 +27,7 @@ html {
 body {
 	background-color: var(--bgColor);
 	padding-top: calc(var(--paddingMod) * 10);
+	padding-bottom: calc(var(--paddingMod) * 10);
 }
 
 button {
@@ -34,6 +36,7 @@ button {
 }
 
 .accordion {
+	width: 90%;
 	max-width: 700px;
 	margin: 0 auto;
 	font-size: 1.3em;
@@ -44,15 +47,15 @@ button {
 	box-shadow: var(--accShadow);
 }
 
-.accordion .accordion_item:hover {
-	cursor: pointer;
-}
-
 .accordion .accordion_item .item_header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: calc(var(--paddingMod) * 3);
+}
+
+.accordion .accordion_item .item_header .item_icon {
+	transition: transform var(--showDuration) var(--showDelay);
 }
 
 .accordion .accordion_item .item_content {
@@ -71,11 +74,7 @@ button {
 	transform: scale(0);
 	transition-property: transform, max-height;
 	transition-duration: var(--showDuration);
-}
-
-.accordion_item:hover .item_content .meme_image {
-	transform: scale(1);
-	max-height: 50vh;
+	transition-delay: var(--showDelay);
 }
 
 .accordion .divider {
