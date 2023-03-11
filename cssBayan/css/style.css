@@ -1,0 +1,92 @@
+:root {
+	--bgColor: #f3f3f3;
+	--accentColor: rgb(58, 134, 255);
+	--opacityAccentCOlor: rgba(147, 213, 246, 0.881);
+	--borderRadius: 10px;
+	--iconBorderRadius: 4px;
+	--paddingMod: 5px;
+	--accShadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+	--showDuration: 0.5s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body,
+html {
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	background-color: var(--bgColor);
+	padding-top: calc(var(--paddingMod) * 10);
+}
+
+button {
+	border: none;
+	outline: none;
+}
+
+.accordion {
+	max-width: 700px;
+	margin: 0 auto;
+	font-size: 1.3em;
+	font-family: monospace;
+
+	padding: calc(var(--paddingMod) * 2);
+	border-radius: var(--borderRadius);
+	box-shadow: var(--accShadow);
+}
+
+.accordion .accordion_item:hover {
+	cursor: pointer;
+}
+
+.accordion .accordion_item .item_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: calc(var(--paddingMod) * 3);
+}
+
+.accordion .accordion_item .item_content {
+	border-bottom: 1px solid #00000020;
+}
+
+.accordion .accordion_item:last-child .item_content {
+	border-bottom: none;
+}
+
+.accordion .accordion_item .item_content .meme_image {
+	display: block;
+	max-height: 0;
+	max-width: 80vw;
+	margin: 0 auto;
+	transform: scale(0);
+	transition-property: transform, max-height;
+	transition-duration: var(--showDuration);
+}
+
+.accordion_item:hover .item_content .meme_image {
+	transform: scale(1);
+	max-height: 50vh;
+}
+
+.accordion .divider {
+	margin: 5px 0;
+}
+
+.icon__material {
+	background-color: var(--opacityAccentCOlor);
+	color: var(--accentColor);
+	border-radius: var(--iconBorderRadius);
+	font-size: 1.1em;
+	padding: 4px 4px 0px 4px;
+	cursor: pointer;
+}
