@@ -56,10 +56,6 @@ button {
 	border-radius: calc(var(--borderRadius) * 0.6);
 }
 
-.accordion .accordion_item .item_header .item_title {
-	position: relative;
-}
-
 .accordion .accordion_item .item_header .item_icon {
 	transition: transform var(--showDuration) var(--showDelay);
 }
