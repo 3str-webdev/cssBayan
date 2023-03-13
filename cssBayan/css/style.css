@@ -1,0 +1,88 @@
+:root {
+	--bgColor: #f3f3f3;
+	--accentColor: rgb(58, 134, 255);
+	--opacityAccentColor: rgba(147, 213, 246, 0.881);
+	--borderRadius: 1em;
+	--iconBorderRadius: 0.4em;
+	--paddingMod: 0.4em;
+	--accShadow: 0 0 1.4em rgba(0, 0, 0, 0.15);
+
+	--showDuration: 0.5s;
+	--showDelay: 0.1s;
+	--clickAnimDuration: 1s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body,
+html {
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	background-color: var(--bgColor);
+	padding-top: calc(var(--paddingMod) * 10);
+	padding-bottom: calc(var(--paddingMod) * 10);
+}
+
+button {
+	border: none;
+	outline: none;
+}
+
+.accordion {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 1.3em;
+	font-family: monospace;
+
+	padding: calc(var(--paddingMod) * 2);
+	border-radius: var(--borderRadius);
+	box-shadow: var(--accShadow);
+}
+
+.accordion .accordion_item .item_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: calc(var(--paddingMod) * 3);
+	border-radius: calc(var(--borderRadius) * 0.6);
+}
+
+.accordion .accordion_item .item_header .item_icon {
+	transition: transform var(--showDuration) var(--showDelay);
+}
+
+.accordion .accordion_item .item_content {
+	border-bottom: calc(1em / 14) solid #00000020;
+}
+
+.accordion .accordion_item:last-child .item_content {
+	border-bottom: none;
+}
+
+.accordion .accordion_item .item_content .meme_image {
+	display: block;
+	max-height: 0;
+	max-width: 80vw;
+	margin: 0 auto;
+	transform: scale(0);
+	transition-property: transform, max-height;
+	transition-duration: var(--showDuration);
+	transition-delay: var(--showDelay);
+}
+
+.icon__material {
+	background-color: var(--opacityAccentColor);
+	color: var(--accentColor);
+	border-radius: var(--iconBorderRadius);
+	font-size: 1.1em;
+	padding: calc(1em / 5) calc(1em / 5) 0 calc(1em / 5);
+	cursor: pointer;
+}

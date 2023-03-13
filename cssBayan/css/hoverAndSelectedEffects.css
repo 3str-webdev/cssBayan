@@ -1,0 +1,78 @@
+.accordion .accordion_item:hover {
+	cursor: pointer;
+}
+
+.accordion .accordion_item:hover .item_header .item_icon {
+	transform: rotate(90deg);
+}
+
+.accordion_item:hover .item_content .meme_image {
+	transform: scale(1);
+	max-height: 50vh;
+}
+
+#item1:checked ~ .accordion_item[for='item1'] .item_header .item_icon {
+	transform: rotate(90deg);
+}
+#item1:checked ~ .accordion_item[for='item1'] .item_header {
+	animation: click var(--clickAnimDuration) ease-in 1;
+}
+#item1:checked ~ .accordion_item[for='item1'] .item_content .meme_image {
+	transform: scale(1);
+	max-height: 50vh;
+}
+
+#item2:checked ~ .accordion_item[for='item2'] .item_header .item_icon {
+	transform: rotate(90deg);
+}
+#item2:checked ~ .accordion_item[for='item2'] .item_header {
+	animation: click var(--clickAnimDuration) ease-in 1;
+}
+#item2:checked ~ .accordion_item[for='item2'] .item_content .meme_image {
+	transform: scale(1);
+	max-height: 50vh;
+}
+
+#item3:checked ~ .accordion_item[for='item3'] .item_header .item_icon {
+	transform: rotate(90deg);
+}
+#item3:checked ~ .accordion_item[for='item3'] .item_header {
+	animation: click var(--clickAnimDuration) ease-in 1;
+}
+#item3:checked ~ .accordion_item[for='item3'] .item_content .meme_image {
+	transform: scale(1);
+	max-height: 50vh;
+}
+
+#item4:checked ~ .accordion_item[for='item4'] .item_header .item_icon {
+	transform: rotate(90deg);
+}
+#item4:checked ~ .accordion_item[for='item4'] .item_header {
+	animation: click var(--clickAnimDuration) ease-in 1;
+}
+#item4:checked ~ .accordion_item[for='item4'] .item_content .meme_image {
+	transform: scale(1);
+	max-height: 50vh;
+}
+
+#item5:checked ~ .accordion_item[for='item5'] .item_header .item_icon {
+	transform: rotate(90deg);
+}
+#item5:checked ~ .accordion_item[for='item5'] .item_header {
+	animation: click var(--clickAnimDuration) ease-in 1;
+}
+#item5:checked ~ .accordion_item[for='item5'] .item_content .meme_image {
+	transform: scale(1);
+	max-height: 50vh;
+}
+
+@keyframes click {
+	0%,
+	100% {
+		color: #000;
+	}
+
+	50% {
+		color: var(--accentColor);
+	}
+}
