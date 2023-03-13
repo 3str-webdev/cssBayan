@@ -1,7 +1,7 @@
 :root {
 	--bgColor: #f3f3f3;
 	--accentColor: rgb(58, 134, 255);
-	--opacityAccentCOlor: rgba(147, 213, 246, 0.881);
+	--opacityAccentColor: rgba(147, 213, 246, 0.881);
 	--borderRadius: 10px;
 	--iconBorderRadius: 4px;
 	--paddingMod: 5px;
@@ -9,6 +9,7 @@
 
 	--showDuration: 0.5s;
 	--showDelay: 0.1s;
+	--clickAnimDuration: 1s;
 }
 
 * {
@@ -52,6 +53,7 @@ button {
 	justify-content: space-between;
 	align-items: center;
 	padding: calc(var(--paddingMod) * 3);
+	border-radius: calc(var(--borderRadius) * 0.6);
 }
 
 .accordion .accordion_item .item_header .item_title {
@@ -86,7 +88,7 @@ button {
 }
 
 .icon__material {
-	background-color: var(--opacityAccentCOlor);
+	background-color: var(--opacityAccentColor);
 	color: var(--accentColor);
 	border-radius: var(--iconBorderRadius);
 	font-size: 1.1em;
